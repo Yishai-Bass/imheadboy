@@ -15,13 +15,14 @@
     .overlay { background-color: rgba(255,255,255,0.7); flex: 1; }
     .navbar { background: rgba(85,85,85,0.8); }
     .navbar-brand { font-weight: bold; }
-    /* Make carousel arrows black */
+    /* Black carousel arrows */
     .carousel-control-prev-icon,
     .carousel-control-next-icon { filter: invert(100%); }
     .product-card {
       transition: transform 0.2s;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       border: none;
+      cursor: pointer;
     }
     .product-card:hover { transform: scale(1.03); }
     .card-img-top {
@@ -31,11 +32,6 @@
     .footer {
       background: rgba(51,51,51,0.8); color: #fff;
       padding: 20px 0; text-align: center;
-    }
-    /* Remove default link styles for cards */
-    a.card-link {
-      text-decoration: none;
-      color: inherit;
     }
   </style>
 </head>
@@ -69,51 +65,95 @@
 
       <!-- Carousel with Enlarged, Clickable Product Cards -->
       <div class="container my-5">
-        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
           <div class="carousel-inner">
+            <!-- Mug -->
             <div class="carousel-item active">
-              <a href="items.html?product=mug" class="card-link">
-                <div class="card product-card mx-auto" style="width: 25rem;">
-                  <img src="mug.png" class="card-img-top" alt="The Head Boy Brew Mug">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">The Head Boy Brew Mug</h5>
-                    <p class="card-text">R19.99</p>
-                  </div>
+              <div class="card product-card mx-auto" style="width: 25rem;" onclick="window.location='items.html?product=mug'">
+                <img src="mug.png" class="card-img-top" alt="The Head Boy Brew Mug">
+                <div class="card-body text-center">
+                  <h5 class="card-title">The Head Boy Brew Mug</h5>
+                  <p class="card-text">R19.99</p>
+                  <a href="items.html?product=mug" class="btn btn-success">View Item</a>
                 </div>
-              </a>
+              </div>
             </div>
+            <!-- Cap -->
             <div class="carousel-item">
-              <a href="items.html?product=cap" class="card-link">
-                <div class="card product-card mx-auto" style="width: 25rem;">
-                  <img src="cap.png" class="card-img-top" alt="Official Head Boy Thinking Cap">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Official Head Boy Thinking Cap</h5>
-                    <p class="card-text">R24.99</p>
-                  </div>
+              <div class="card product-card mx-auto" style="width: 25rem;" onclick="window.location='items.html?product=cap'">
+                <img src="cap.png" class="card-img-top" alt="Official Head Boy Thinking Cap">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Official Head Boy Thinking Cap</h5>
+                  <p class="card-text">R24.99</p>
+                  <a href="items.html?product=cap" class="btn btn-success">View Item</a>
                 </div>
-              </a>
+              </div>
             </div>
+            <!-- Tee -->
             <div class="carousel-item">
-              <a href="items.html?product=tshirt" class="card-link">
-                <div class="card product-card mx-auto" style="width: 25rem;">
-                  <img src="shirt.jpg" class="card-img-top" alt="Yes, I’m the Head Boy’s Brother Tee">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Yes, I’m the Head Boy’s Brother Tee</h5>
-                    <p class="card-text">R29.99</p>
-                  </div>
+              <div class="card product-card mx-auto" style="width: 25rem;" onclick="window.location='items.html?product=tshirt'">
+                <img src="shirt.jpg" class="card-img-top" alt="Yes, I’m the Head Boy’s Brother Tee">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Yes, I’m the Head Boy’s Brother Tee</h5>
+                  <p class="card-text">R29.99</p>
+                  <a href="items.html?product=tshirt" class="btn btn-success">View Item</a>
                 </div>
-              </a>
+              </div>
             </div>
+            <!-- Pillow -->
             <div class="carousel-item">
-              <a href="items.html?product=pillow" class="card-link">
-                <div class="card product-card mx-auto" style="width: 25rem;">
-                  <img src="pillow.jpg" class="card-img-top" alt="Dream Big Head Boy Pillow">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Dream Big Head Boy Pillow</h5>
-                    <p class="card-text">R39.99</p>
-                  </div>
+              <div class="card product-card mx-auto" style="width: 25rem;" onclick="window.location='items.html?product=pillow'">
+                <img src="pillow.jpg" class="card-img-top" alt="Dream Big Head Boy Pillow">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Dream Big Head Boy Pillow</h5>
+                  <p class="card-text">R39.99</p>
+                  <a href="items.html?product=pillow" class="btn btn-success">View Item</a>
                 </div>
-              </a>
+              </div>
+            </div>
+            <!-- Phone Cover -->
+            <div class="carousel-item">
+              <div class="card product-card mx-auto" style="width: 25rem;" onclick="window.location='items.html?product=cover'">
+                <img src="cover.png" class="card-img-top" alt="The Call-Me-Head-Boy Phone Case">
+                <div class="card-body text-center">
+                  <h5 class="card-title">The Call-Me-Head-Boy Phone Case</h5>
+                  <p class="card-text">R14.99</p>
+                  <a href="items.html?product=cover" class="btn btn-success">View Item</a>
+                </div>
+              </div>
+            </div>
+            <!-- Bottle -->
+            <div class="carousel-item">
+              <div class="card product-card mx-auto" style="width: 25rem;" onclick="window.location='items.html?product=bottle'">
+                <img src="bottle.png" class="card-img-top" alt="Head Boy Hydration Station">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Head Boy Hydration Station</h5>
+                  <p class="card-text">R19.99</p>
+                  <a href="items.html?product=bottle" class="btn btn-success">View Item</a>
+                </div>
+              </div>
+            </div>
+            <!-- Notebook -->
+            <div class="carousel-item">
+              <div class="card product-card mx-auto" style="width: 25rem;" onclick="window.location='items.html?product=notebook'">
+                <img src="notebook.png" class="card-img-top" alt="Head Boy’s Genius-Level Notebook">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Head Boy’s Genius-Level Notebook</h5>
+                  <p class="card-text">R12.99</p>
+                  <a href="items.html?product=notebook" class="btn btn-success">View Item</a>
+                </div>
+              </div>
+            </div>
+            <!-- Hoodie -->
+            <div class="carousel-item">
+              <div class="card product-card mx-auto" style="width: 25rem;" onclick="window.location='items.html?product=hoodie'">
+                <img src="hoodie.png" class="card-img-top" alt="Hoodie of Humble Bragging">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Hoodie of Humble Bragging</h5>
+                  <p class="card-text">R49.99</p>
+                  <a href="items.html?product=hoodie" class="btn btn-success">View Item</a>
+                </div>
+              </div>
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
@@ -127,7 +167,7 @@
         </div>
       </div>
 
-      <!-- Big Button to Enter the Shop -->
+      <!-- Big Button to View All Products -->
       <div class="container text-center my-5">
         <a href="shop.html" class="btn btn-primary btn-lg px-5 py-3">View All Products</a>
       </div>
@@ -141,5 +181,9 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const carouselElement = document.getElementById('productCarousel');
+    new bootstrap.Carousel(carouselElement, { interval: 3000, ride: 'carousel' });
+  </script>
 </body>
 </html>
