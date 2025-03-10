@@ -12,16 +12,20 @@
       font-family: Arial, sans-serif;
     }
     .wrapper {
-      display: flex;
-      flex-direction: column;
+      position: relative;
       min-height: 100vh;
       background: url('image.jpg') no-repeat center center fixed;
       background-size: cover;
     }
     .overlay {
-      background-color: rgba(255,255,255,0.7);
-      flex: 1;
-      padding: 2rem 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255,255,255,0.7);
+      display: flex;
+      flex-direction: column;
     }
     .navbar {
       background: rgba(85,85,85,0.8);
@@ -32,55 +36,61 @@
     .content {
       flex: 1;
       padding: 2rem 0;
+      position: relative;
+      z-index: 1;
     }
     .footer {
       background: rgba(51,51,51,0.8);
       color: #fff;
       padding: 20px 0;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
 <body>
   <div class="wrapper">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">ImHeadBoy Store</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html">Shop</a></li>
-            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          </ul>
+    <div class="overlay">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">ImHeadBoy Store</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html">Shop</a></li>
+              <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="content.html">Contact</a></li>
+            </ul>
+          </div>
         </div>
+      </nav>
+      <!-- Content -->
+      <div class="content container">
+        <h1>About ImHeadBoy Store</h1>
+        <p>
+          Welcome to ImHeadBoy Store—the official outlet inspired by the unsung hero of every wedding: the groom's younger brother, who's so overachieving it’s borderline legendary.
+        </p>
+        <p>
+          Born from years of sibling rivalry, relentless ambition, and a humble (if not slightly obsessive) desire for recognition, our store celebrates the art of being Head Boy. Why just earn a title when you can wear it on a mug, a cap, or even a pillow?
+        </p>
+        <p>
+          At ImHeadBoy Store, we specialize in top-tier gear that shouts, "I’m not just a sibling—I’m the Head Boy’s kin!" Whether you're here to remind everyone of your inherent superiority or simply to enjoy a touch of familial jest, we’ve got you covered.
+        </p>
+        <p>
+          Remember: Being Head Boy isn’t just a title—it’s a lifestyle. And maybe a slight obsession.
+        </p>
       </div>
-    </nav>
-    <!-- Content -->
-    <div class="overlay content container">
-      <h1>About ImHeadBoy Store</h1>
-      <p>
-        Welcome to ImHeadBoy Store—the official outlet inspired by the unsung hero of every wedding: the groom's younger brother, who's so overachieving it’s borderline legendary.
-      </p>
-      <p>
-        Born from years of sibling rivalry, relentless ambition, and a humble (if not slightly obsessive) desire for recognition, our store celebrates the art of being Head Boy. Why just earn a title when you can wear it on a mug, a cap, or even a pillow?
-      </p>
-      <p>
-        At ImHeadBoy Store, we specialize in top-tier gear that shouts, "I’m not just a sibling—I’m the Head Boy’s kin!" Whether you're here to remind everyone of your inherent superiority or simply to enjoy a touch of familial jest, we’ve got you covered.
-      </p>
-      <p>
-        Remember: Being Head Boy isn’t just a title—it’s a lifestyle. And maybe a slight obsession.
-      </p>
-    </div>
-    <!-- Sticky Footer -->
-    <div class="footer">
-      <div class="container">
-        <p>&copy; 2025 ImHeadBoy Store. All Rights Reserved.</p>
+      <!-- Sticky Footer -->
+      <div class="footer">
+        <div class="container">
+          <p>&copy; 2025 ImHeadBoy Store. All Rights Reserved.</p>
+        </div>
       </div>
     </div>
   </div>
